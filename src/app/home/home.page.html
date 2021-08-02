@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title size="large" class='ion-text-center' style='margin-top: 10px;' >
+      PokeDex Arctica
+    </ion-title>
+    <ion-input clearInput placeholder='Buscar' [(ngModel)]="iBuscar"><ion-icon name="search" slot="start"></ion-icon></ion-input>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let poke of pokemons | filter:iBuscar" class='ion-text-center ion-no-padding ion-no-margin' size="6">
+        <ion-card (click)="viewDetails(poke.urlForMore)">
+          <img style='width: 45%; height: 45%;' src="{{'https://cdn.traction.one/pokedex/pokemon/' + poke.id + '.png'}}"/>
+          <ion-card-header>
+            <ion-card-title style='font-size: 1rem; text-transform: capitalize;'>{{ poke.name }}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

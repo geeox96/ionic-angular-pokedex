@@ -1,0 +1,7 @@
+{
+  "name": "Pokedex Arctica",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

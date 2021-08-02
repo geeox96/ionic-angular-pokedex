@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{name}}</ion-title>
+    <ion-buttons slot="end">
+    <ion-buttons (click)='closeDetails()'>Voltar</ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <ion-img src="{{'https://cdn.traction.one/pokedex/pokemon/' + id + '.png'}}"></ion-img>
+
+      <ion-card-header>
+        <ion-card-title>{{name}}</ion-card-title>
+
+      </ion-card-header>
+
+      </ion-card>
+      <ion-card>
+        <ion-list>
+          <ion-list-header color="tertiary">
+            Info
+          </ion-list-header>
+          <ion-item>
+            <ion-label>Experience Base</ion-label>
+            <ion-badge color="primary" slot="end">{{xp}}</ion-badge>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+</ion-content>
